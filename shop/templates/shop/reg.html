@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация | NEONKA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'products' %}">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}">Журнал</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="form-container">
+            <h2 style="text-align:center;
+             color:#fff;
+             margin-bottom:30px;
+              font-family:'Cinzel', serif;">Create Account</h2>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-submit-premium">Register Now</button>
+            </form>
+
+            <p style="margin-top:20px;
+             text-align:center;
+             font-size:0.9rem;
+              color:#666;">
+                Уже есть аккаунт? <a href="{% url 'login' %}" style="color:var(--gold-main);">Sign In</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+       <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>

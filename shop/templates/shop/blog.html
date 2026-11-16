@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал | NEONKA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'products' %}">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}" class="active">Журнал</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-page">
+            <h2>Журнал</h2>
+            <p>Интервью, тренды и философия бренда.</p>
+
+            <article style="margin-top: 40px;
+             text-align: left;
+              border-bottom: 1px solid #333;
+               padding-bottom: 30px;">
+                <small style="color:var(--gold-main);">ОКТ 25, 2026</small>
+                <h3 style="font-size: 1.8rem; margin: 10px 0;">Искусство тишины</h3>
+                <p>Как минимализм влияет на восприятие роскоши в современном мире...</p>
+                <a href="#" class="btn-luxury" style="padding: 10px 20px; font-size: 0.8rem;">Читать далее</a>
+            </article>
+
+            <article style="margin-top: 40px;
+            -align: left;
+             border-bottom: 1px solid #333;
+              padding-bottom: 30px;">
+                <small style="color:var(--gold-main);">СЕНТ 15, 2026</small>
+                <h3 style="font-size: 1.8rem; margin: 10px 0;">Материалы будущего</h3>
+                <p>Обзор новых тканей, которые мы использовали в осенней коллекции...</p>
+                <a href="#" class="btn-luxury" style="padding: 10px 20px; font-size: 0.8rem;">Читать далее</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+        <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>

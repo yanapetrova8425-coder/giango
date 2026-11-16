@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход | NEONKA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'products' %}">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}">Журнал</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'login' %}" class="active">Вход</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="form-container">
+            <h2 style="text-align:center;
+            color:#fff;
+             margin-bottom:30px;
+              font-family:'Cinzel', serif;">ЗАЙДИТЕ НА СВОЙ АККАУНТ ;)</h2>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>ВАШ ЛОГИН</label>
+                    <input type="email" placeholder="name@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>ПОРОЛЬ</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-submit-premium">ВОЙТИ</button>
+            </form>
+
+            <p style="margin-top:20px;
+             text-align:center;
+             font-size:0.9rem;
+             color:#666;">
+                Нет аккаунта? <a href="{% url 'register' %}" style="color:var(--gold-main);">РЕГИСТРАЦИЯ</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+      <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>

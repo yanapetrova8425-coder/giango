@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О бренде | NEONKA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'products' %}">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}">Журнал</a>
+            <a href="{% url 'about' %}" class="active">О нас</a>
+            <a href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-page">
+            <h2>ФИЛОСОФИЯ БРЕНДА</h2>
+            <p style="font-size: 1.3rem;
+             color: #ddd;">
+                NEONKA — это не просто бренд одежды.<br>
+                Это манифест современного потребления.
+            </p>
+            <hr style="border:0;
+             border-top:1px solid #333;
+              margin: 40px auto;
+              width: 100px;">
+            <p>
+                Мы верим, что вещь должна служить десятилетиями, а не одному сезону.
+                Каждый продукт проходит через руки наших мастеров, прежде чем попасть к вам.
+                Мы отказались от массового производства ради индивидуального подхода.
+            </p>
+            <blockquote style="border-left:
+             2px solid var(--gold-main);
+              padding-left: 20px;
+              margin: 40px 0;
+               font-style: italic;
+                color: var(--gold-main);
+                 text-align: left;">
+                "Роскошь начинается там, где заканчивается необходимость."
+            </blockquote>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+       <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>

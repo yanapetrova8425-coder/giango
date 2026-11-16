@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Коллекция | NEONKA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'products' %}" class="active">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}">Журнал</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="products-header">
+            <h2>НАША КОЛЛЕКЦИЯ</h2>
+            <p style="color:#888;">НОВИНКИ 2026</p>
+        </div>
+
+        {% if products %}
+        <div class="product-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <div class="product-image-wrap">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                        <div style="width:100%; height:100%;
+                         display:flex; align-items:center;
+                         justify-content:center; color:#333;
+                         font-size:2rem;">НЕТ ФОТО</div>
+                    {% endif %}
+                    <div class="buy-btn-overlay">ПРИОБРЕТАЙТЕ</div>
+                </div>
+                <div class="product-info">
+                    <span class="product-cat">{{ product.category.name }}</span>
+                    <h3 class="product-name">{{ product.name }}</h3>
+                    <span class="product-price">{{ product.price }} ₽</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p style="text-align:center;
+         color:#666;
+         padding: 50px;">Коллекция пополняется...</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+        <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>

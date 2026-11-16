@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>NEONKA | Exclusive Luxury</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- ШАПКА -->
+    <div class="header">
+        <div class="logo"><a href="{% url 'home' %}"><p>NEONKA</p></a></div>
+        <div class="menu">
+            <a href="{% url 'home' %}" class="active">Главная</a>
+            <a href="{% url 'products' %}">Коллекция</a>
+            <a href="{% url 'team' %}">Команда</a>
+            <a href="{% url 'blog' %}">Журнал</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <a href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+
+
+    <section class="hero-section">
+        <h1 class="hero-title">Эстетика<br>Совершенства</h1>
+        <p class="hero-subtitle">Откройте мир эксклюзивных вещей, созданных для избранных.</p>
+        <a href="{% url 'products' %}" class="btn-luxury">Смотреть Коллекцию</a>
+    </section>
+
+
+    <section class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3 class="feature-title">Редкость</h3>
+            <p class="feature-desc">Каждый экземпляр имеет свой уникальный номер и сертификат подлинности.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3 class="feature-title">Handmade</h3>
+            <p class="feature-desc">Создано руками лучших мастеров Италии и Франции без использования конвейера.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"></div>
+            <h3 class="feature-title">VIP Доставка</h3>
+            <p class="feature-desc">Личный курьер доставит заказ в любой город мира в течение 24 часов.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">NEONKA</div>
+      <p class="footer-copy">&copy; 2026 NEONKA ЭТО ДОМ СТИЛЕЙ.</p>
+    </footer>
+</body>
+</html>
